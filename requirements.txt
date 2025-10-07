@@ -1,0 +1,7 @@
+openai>=1.0.0
+requests>=2.31.0
+psutil>=5.9.0
+rich>=13.0.0
+prompt-toolkit>=3.0.43
+pyyaml>=6.0
+javalang>=0.13.0

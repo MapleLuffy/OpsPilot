@@ -1,0 +1,32 @@
+# OpsPilot 配置文件示例
+
+llm:
+  # 模式: "ollama" 或 "api"
+  mode: "ollama"
+  
+  # Ollama配置（mode为ollama时使用）
+  ollama:
+    base_url: "http://localhost:11434"
+    model: "llama2"
+  
+  # API配置（mode为api时使用）
+  api:
+    base_url: "https://api.openai.com/v1"
+    api_key: "your-api-key-here"
+    model: "gpt-3.5-turbo"
+
+# JVM分析配置
+jvm:
+  # 大对象阈值（单位：MB）
+  large_object_threshold: 10
+
+# 命令风险检查配置
+command_check:
+  # 高危命令列表
+  dangerous_commands:
+    - "rm -rf"
+    - "mkfs"
+    - "dd"
+    - "> /dev/sda"
+    - "chmod -R 777"
+    - "kill -9"
